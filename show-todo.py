@@ -7,7 +7,7 @@ def insert (source_str, insert_str, pos):
     return source_str[:pos]+insert_str+source_str[pos:]
 
 parser = argparse.ArgumentParser(description='Show FIXMEs, TODOs or whatever present in a project')
-parser.add_argument('-f', '--file', type=str, default='.rules', help='Specify rule file. .rules by default.')
+# parser.add_argument('-f', '--file', type=str, default='.rules', help='Specify rule file. .rules by default.')
 
 
 args = vars(parser.parse_args())
