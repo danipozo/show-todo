@@ -1,6 +1,7 @@
 template_head = """
 \\documentclass[11pt]{{article}}
 
+\\usepackage[a3paper, landscape, margin=0.3in]{{geometry}}
 \\usepackage[spanish]{{babel}}
 \\usepackage[utf8]{{inputenc}}
 \\usepackage[dvipsnames]{{xcolor}}
