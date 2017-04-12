@@ -66,6 +66,10 @@ for f in files:
                     line = insert_color_mark(c, conf.colors.END_DELIMITER, line, m.start(), m.end())
                     
             if match == True:
+                line = line.rstrip()
+
+                if args['output_format'] == 'latex':
+                    line = line.replace('%', '\%')
                 print(line_format_string.format(f,i,line.rstrip()))
 
             i = i+1
