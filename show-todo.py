@@ -71,6 +71,8 @@ for f in files:
                 if args['output_format'] == 'latex':
                     line = line.replace('%', '\%')
                     line = line.replace('_', '')
+                    line = line.replace('#', '\#')
+                    line = line.replace('@', '\@')
                 print(line_format_string.format(f,i,line.rstrip()))
 
             i = i+1
