@@ -27,7 +27,7 @@ for dp, dn, filenames in os.walk('.'):
 
 
 # Do the actual matching
-output = []
+output = [{ "exprs" : [expr for expr in conf.matchPatterns] }]
 exprs = [re.compile(expr) for expr in conf.matchPatterns]
 for f in files:
     with open(f, 'r') as file:
@@ -38,7 +38,7 @@ for f in files:
 
             positions = []
             matchesDicts = []
-            j = 1
+            j = 0
             for p in exprs:
                 ms = p.finditer(line)
 

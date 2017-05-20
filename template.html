@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+
+  <title>{{ title  }}</title>
+
+  <link rel="stylesheet" href="bulma.css">
+
+</head>
+
+<body>
+  <div class="hero-body">
+    <div class="container">
+         <h1 class="title is-1">{{ title  }}</h3>
+    </div>
+  </div>
+  
+  <section class="section is-medium">
+  {% for item in items %}
+    <div class="box">
+      <div class="content">
+	<strong>{{ item.pattern }}</strong>
+	<br>
+
+	<p>{{ item.text }}</p>
+      </div>
+    </div>
+  
+  {% endfor %}
+  </section>
+</body>
+</html>
