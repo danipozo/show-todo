@@ -10,7 +10,7 @@ expressions of interest (by default `FIXME`, `TODO` and `WARNING`). It will then
 a piece of JSON to be treated by other programs.
 
 `todo-to-html.py` takes this output and processes it producing an HTML web page using a
-[Jinja2](https://jinja.pocoo.org) template. Default template uses [Bulma](https://bulma.io) and [MathJax](https://mathjax.org).
+[Jinja2](http://jinja.pocoo.org) template. Default template uses [Bulma](http://bulma.io) and [MathJax](https://mathjax.org).
 
 `show-todo.py` is deprecated code.
 
