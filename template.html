@@ -7,6 +7,7 @@
   <title>{{ title  }}</title>
 
   <link rel="stylesheet" href="bulma.css">
+  <script type="text/javascript" async src="MathJax-master/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </head>
 
@@ -19,12 +20,21 @@
   
   <section class="section is-medium">
   {% for item in items %}
-    <div class="box">
-      <div class="content">
-	<strong>{{ item.pattern }}</strong>
+    <div class="box columns">
+      <div class="content column">
+	{% for p,c in item.patterns %}
+	<strong style="color: {{ c }}">{{ p }}</strong>
+	{% if not loop.last %}
+	<span>, </span>
+	{% endif %}
+	{% endfor %}
 	<br>
 
 	<p>{{ item.text }}</p>
+      </div>
+
+      <div class="content column">
+	<p>{{ item.file }}:{{ item.lineNum }}</p>
       </div>
     </div>
   

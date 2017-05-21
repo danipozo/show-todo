@@ -4,7 +4,9 @@ class ShowTodoConfig:
 
     def __init__(self):
         self.filePatterns = [
-                '*.cpp'
+                '*.tex',
+                '*.md',
+                '*.py'
         ]
 
         self.matchPatterns = [
