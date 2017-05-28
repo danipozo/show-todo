@@ -1,11 +1,14 @@
 import os, glob, argparse, sys, re, fnmatch, json
 import Config
 
+parser = argparse.ArgumentParser(description='Find TODOs, FIXMEs, etc. (or arbitrary patterns) in a code file.')
+parser.add_argument('directory')
 
+args = vars(parser.parse_args())
 conf = Config.ShowTodoConfig()
 
 files = []
-for dp, dn, filenames in os.walk('.'):
+for dp, dn, filenames in os.walk(args['directory']):
     for ff in filenames:
         for line in conf.filePatterns:
             if fnmatch.fnmatch(ff, line):
